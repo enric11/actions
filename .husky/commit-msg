@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+branch=$(git rev-parse --abbrev-ref HEAD)
+echo "The current branch is $branch"
+
 INPUT_FILE=$(cat "${1:?Missing commit message file}")
 PATTERN="\[[0-9]+\]+"
 if ! [[ "$INPUT_FILE" =~ $PATTERN ]]; then
