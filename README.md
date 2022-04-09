@@ -1,3 +1,15 @@
+# Que he fet:
+
+## Instalar husky
+npm install husky --save-dev
+npx husky install
+npm set-script prepare "husky install"
+npx husky add .husky/commit-msg "npm test"
+
+Agegir el codi del commit-msg
+
+
+
 ## Application Details
 |               |
 | ------------- |
@@ -17,6 +29,7 @@
 |**Add Eslint configuration**<br>False|
 
 ## myapp
+
 
 A Fiori application.
 
