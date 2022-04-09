@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+INPUT_FILE=$(cat "${1:?Missing commit message file}")
+PATTERN="\[[0-9]+\]+"
+if ! [[ "$INPUT_FILE" =~ $PATTERN ]]; then
+  echo -e "\e[0;31mBad commit message, see example: [123] commit message\e[0;00m"
+  exit 1
+fi
+
+commit_msg=$(cat "${1:?Missing commit message file}")
+echo "$commit_msg"
